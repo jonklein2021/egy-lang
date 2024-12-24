@@ -1,187 +1,191 @@
-/** Based on grammar from CSE 302 @ Lehigh */
+/** Based on Asa grammar from Compiler Design (CSE 302/402) @ Lehigh University */
 grammar Egy;
 
-/*****************
-   Main Program
-*****************/
-
-program
-  : PROGRAM ID statement
-  ;
-
-/* TODO: allow for declarations, initializations, and assignments anywhere in the program */
-
 /****************************
-  Declarations (not currently used)
+            Types
 ****************************/
 
-constant_definition
-  : ID EQUALS literal
+type
+  : array_type
+  | discrete_type
+  | set_type
   ;
 
-type_definition
-  : ID EQUALS atype
+array_type
+  : type LBRACKET ( integerLiteral )? RBRACKET
   ;
 
-variable_declaration
-  : ID ( COMMA ID )* COLON atype
+discrete_type
+  : CHAR
+  | SHORT
+  | INT
+  | LONG
+  | LONGER
+  | FLOAT
+  | DOUBLE
+  | STRING
+  | FUNCTION
   ;
+
+set_type
+  : type LBRACE ( integerLiteral )? RBRACE
+  ;
+
+/****************************
+          Literals
+****************************/
 
 literal
-  : discreteLiteral      # DiscreteLiteralAlt
-  | STRINGLITERAL        # StringLiteralAlt
-  | setLiteral           # SetLiteralAlt
+  : array_literal
+  | discrete_literal
+  | string_literal
+  | set_literal
   ;
 
-setLiteral
-  : LBRACKET discreteLiteral ( COMMA discreteLiteral )* RBRACKET
+array_literal
+  : LBRACE literal ( COMMA literal )* RBRACE
   ;
 
-discreteLiteral
-  : integerLiteral       # IntegerLiteralAlt
-  | booleanLiteral       # BooleanLiteralAlt
-  | CHARLITERAL          # CharLiteralAlt
+discrete_literal
+  : char_literal
+  | boolean_literal
+  | function_definition
+  | numeric_literal
   ;
 
-integerLiteral
-  : DECIMALINTEGERLITERAL      # DecimalIntegerLiteralAlt
-  | HEXADECIMALINTEGERLITERAL  # HexadecimalIntegerLiteralAlt
-  | OCTALINTEGERLITERAL        # OctalIntegerLiteralAlt
-  ;  
-
-booleanLiteral
+boolean_literal
   : 'true'
   | 'false'
   ;
 
-atype
-  : namedType 
-  | rangeType
-  | arrayType
-  | setType
-  | enumType
+/*
+  ex:
+
+  (a: int, b: int) -> int
+    if a > b
+      return a
+    else
+      return b
+
+  succ(n: long) -> long
+    return n+1;
+*/
+function_definition
+  : LPAREN ( id COLON type ( COMMA id COLON type )* )? RPAREN RIGHTARROW type statement
   ;
 
-namedType
-  : ID
-  ;
+numeric_literal
+  : BINARYLITERAL
+  | DECIMALLITERAL
+  | OCTALLITERAL
+  | HEXADECIMALLITERAL
+  ;  
 
-rangeType
-  : discreteLiteral DOTDOT discreteLiteral
-  ;
-
-arrayType
-  : ARRAY LBRACKET rangeType RBRACKET OF atype
-  ;
-
-setType
-  : SET OF rangeType
-  ;
-
-enumType
-  : LPAREN ID ( COMMA ID )* RPAREN
+set_literal
+  : LBRACKET literal ( COMMA literal )* RBRACKET
   ;
 
 /***************************
-          Statements
+         Statements
 ****************************/
 
 statement
-  : assignment_statement 
-  | compound_statement 
-  | while_statement 
-  | repeat_statement 
+  : assignment_statement
+  | const_initialization_statement
+  | declaration_statement
+  | compound_statement
+  | if_statement
+  | do_while_statement
+  | while_statement
+  | repeat_statement
   | for_statement
-  | if_statement 
-  | case_statement
   | print_statement
-  ; 
+  ;
 
 assignment_statement
-  : lhsreference ASSIGN logicalexpression SEMICOLON
+  : lhs_reference ASSIGN logical_expression SEMICOLON
   ;
 
-lhsreference
-  : ID ( LBRACKET simpleexpression RBRACKET )?
+const_initialization_statement
+  : CONST lhs_reference ( COLON type )? ASSIGN logical_expression SEMICOLON
   ;
 
-rhsvalue
-  : ID ( LBRACKET simpleexpression RBRACKET )?
-  ;  
+declaration_statement
+  : LET lhs_reference COLON type SEMICOLON
+  ;
+
+initialization_statement
+  : LET lhs_reference ( COLON type )? ASSIGN logical_expression SEMICOLON
+  ;
+
+lhs_reference
+  : id ( LBRACKET simple_expression RBRACKET )?
+  ;
+
+rhs_value
+  : id ( LBRACKET simple_expression RBRACKET )?
+  ;
 
 compound_statement
   : LBRACE statement* RBRACE
   ;
 
+do_while_statement
+  : DO statement WHILE logical_expression
+  ;
+
 while_statement
-  : WHILE logicalexpression statement
+  : WHILE logical_expression statement
   ;
 
 repeat_statement
-  : REPEAT statement* UNTIL logicalexpression SEMICOLON
+  : REPEAT statement UNTIL logical_expression SEMICOLON
   ;
 
 for_statement
-  : FOR ID IN for_iterable statement
+  : FOR id IN for_iterable statement
   ;
 
 for_iterable
-  : rangeType
-  | ID
-  | setLiteral
+  : array_literal
+  | char_literal DOTDOT char_literal
+  | numeric_literal DOTDOT numeric_literal
+  | id
+  | set_literal
   ;
 
 if_statement
-  : IF logicalexpression THEN statement ( ELSE statement )?
+  : IF logical_expression statement ( ELSE statement )?
   ;
 
 print_statement
-  : PRINT LPAREN simpleexpression ( COMMA simpleexpression )* RPAREN SEMICOLON
-  ;
-
-case_statement
-  : CASE simpleexpression OF case_limb+ END
-  ;
-
-/* 
-  Add a production here to complete the case statement. The labels on a case are integer literals; if there
-  is more than one then they are separated by commas. A colon separates the labels from the statement that is executed
-  when one of the case labels matches.
-*/
-
-case_limb
-  : integerLiteral (COMMA integerLiteral)* COLON statement
+  : PRINT LPAREN simple_expression ( COMMA simple_expression )* RPAREN SEMICOLON
   ;
 
 /*************************
         Expressions
 *************************/
 
-/*
-  The definition of a logicalexpression, consists of either a single
-  relationalexpression or two relationalexpressions separated by one of and/or
-*/
-
-logicalexpression
-  : relationalexpression (op=(AND | OR) relationalexpression )?
+logical_expression
+  : relational_expression (op=(AND | OR) relational_expression )?
   ;
 
-relationalexpression
-  : simpleexpression (op=(EQUALS | NOTEQUALTO | LESSTHAN | LESSTHANOREQUALTO | GREATERTHAN | GREATERTHANOREQUALTO | IN) simpleexpression )?
+relational_expression
+  : simple_expression (op=(EQUALS | NOTEQUALTO | LESSTHAN | LESSTHANOREQUALTO | GREATERTHAN | GREATERTHANOREQUALTO | IN) simple_expression )?
   ;
 
-simpleexpression
+simple_expression
   : term (op+=(PLUS | MINUS) term)*
   ;
 
 term
-  : factor (op+=(TIMES | DIVIDE | DIV | MOD | LSHIFT | RSHIFT) factor)*
+  : factor (op+=(TIMES | DIVIDE | MOD | LSHIFT | RSHIFT) factor)*
   ;
 
 factor
-  : LPAREN fle=logicalexpression RPAREN
+  : LPAREN fle=logical_expression RPAREN
   | fl=literal
-  | fi=rhsvalue
+  | fi=rhs_value
   | fn=negation
   ;
 
@@ -190,7 +194,7 @@ negation
   ;
 
 /********************
-  Lexical Defs
+     Lexical Defs
 *********************/
 
 AND
@@ -198,15 +202,7 @@ AND
   ;
 
 ASSIGN
-  : ':='
-  ;
-
-ARRAY
-  : 'array'
-  ;
-
-CASE
-  : 'case'
+  : '='
   ;
 
 COLON
@@ -221,20 +217,24 @@ CONST
   : 'const'
   ;
 
-DIV
-  : 'div'
-  ;
-
 DIVIDE 
   : '/'
+  ;
+
+DO
+  : 'do'
   ;
 
 DOTDOT
   : '..'
   ;
 
-DOWNTO
-  : 'downto'
+DOUBLE
+  : 'double'
+  ;
+
+INT
+  : 'int'
   ;
 
 ELSE
@@ -242,18 +242,26 @@ ELSE
   ;
 
 EQUALS
-  : '='
+  : '=='
+  ;
+
+FLOAT
+  : 'float'
   ;
 
 FOR
   : 'for'
   ;
 
-GREATERTHAN 
+FUNCTION
+  : 'func'
+  ;
+
+GREATERTHAN
   : '>'
   ;
 
-GREATERTHANOREQUALTO 
+GREATERTHANOREQUALTO
   : '>='
   ;
 
@@ -277,8 +285,20 @@ LBRACKET
   : '['
   ;
 
-LESSTHANOREQUALTO 
+LESSTHANOREQUALTO
   : '<='
+  ;
+
+LET
+  : 'let'
+  ;
+
+LONG
+  : 'long'
+  ;
+
+LONGER
+  : 'longer'
   ;
 
 LPAREN
@@ -301,20 +321,12 @@ NOTEQUALTO
   : '!='
   ;
 
-OF
-  : 'of'
-  ;
-
 OR
   : 'or'
   ;
 
 NOT
-  : 'not'
-  ;
-
-PERIOD
-  : '.'
+  : '!'
   ;
 
 PLUS
@@ -323,10 +335,6 @@ PLUS
 
 PRINT
   : 'print'
-  ;
-
-PROGRAM
-  : 'program'
   ;
 
 RBRACE
@@ -339,6 +347,10 @@ RBRACKET
 
 REPEAT
   : 'repeat'
+  ;
+
+RIGHTARROW
+  : '->'
   ;
 
 RPAREN
@@ -357,40 +369,57 @@ SET
   : 'set'
   ;
 
-SYMMETRIC_DIFFERENCE
-  : '><'
+SHORT
+  : 'short'
   ;
 
-THEN
-  : 'then'
+STRING
+  : 'string'
   ;
 
 TIMES 
   : '*'
   ;
 
-TO
-  : 'to'
-  ;
-
-TYPE
-  : 'type'
-  ;
-
 UNTIL
   : 'until'
   ;
 
-VAR
-  : 'var'
+VOID
+  : 'void'
   ;
 
 WHILE
   : 'while'
   ;
 
+/* ex: hello, jimmy_7, _unused */
+id
+  : [a-zA-Z_][a-zA-Z0-9_]*
+  ;
+
+/* ex: 0b1010 */
+BINARYLITERAL
+  : '0'[bB][01]+
+  ;
+
+/* ex: 123 */
+DECIMALLITERAL
+  : [1-9][0-9]*
+  ;
+
+/* ex: 0567 */
+OCTALLITERAL
+  : '0'[0-7]+
+  ;
+
+/* ex: 0x123 */
+HEXADECIMALLITERAL
+  : '0'[xX][a-fA-F0-9]+
+  ;
+
 /* ex: '\b', 'a', '\r', '\f' */
-CHARLITERAL
+char_literal
   :	'\'' SingleCharacter '\''
   |	'\'' EscapeSequence '\''
   ;
@@ -405,37 +434,8 @@ EscapeSequence
   : '\\' [btnfr"'\\]
   ;
 
-/* ex: hello, jimmy_7, _unused */
-ID
-  : [a-zA-Z_][a-zA-Z0-9_]*
-  ;
-
-/* ex: 0b1010 */
-DECIMALINTEGERLITERAL
-  : '0'[bB][01]+
-  ;
-
-/* ex: 123 */
-DECIMALINTEGERLITERAL
-  : [1-9][0-9]*
-  ;
-
-/* ex: 0567 */
-OCTALINTEGERLITERAL
-  : '0'[0-7]+
-  ;
-
-/* ex: 0x123 */
-HEXADECIMALINTEGERLITERAL
-  : '0'[xX][a-fA-F0-9]+
-  ;
-  
-STRINGLITERAL
-  : UnterminatedStringLiteral '"'
-  ;
-
-UnterminatedStringLiteral
-  : '"' (~["\\\r\n] | '\\' (. | EOF))*
+string_literal
+  : '"' (~["\\\r\n] | '\\' (. | EOF))* '"'
   ;
 
 COMMENT
