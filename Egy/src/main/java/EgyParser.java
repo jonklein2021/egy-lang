@@ -1,4 +1,5 @@
-// Generated from Egy.g4 by ANTLR 4.13.2
+// Generated from Egy/src/main/antlr4/Egy.g4 by ANTLR 4.13.2
+package antlr4;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -141,12 +142,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_type; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterType(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitType(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitType(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -202,12 +200,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_type_suffix; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterType_suffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitType_suffix(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitType_suffix(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -290,12 +285,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_discrete_type; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterDiscrete_type(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitDiscrete_type(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitDiscrete_type(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -402,12 +394,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_function_type; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFunction_type(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFunction_type(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFunction_type(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -470,12 +459,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_parameter_types; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterParameter_types(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitParameter_types(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitParameter_types(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -528,12 +514,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_return_type; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterReturn_type(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitReturn_type(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitReturn_type(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -600,12 +583,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterLiteral(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitLiteral(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitLiteral(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -685,12 +665,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_array_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterArray_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitArray_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitArray_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -755,12 +732,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_discrete_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterDiscrete_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitDiscrete_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitDiscrete_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -827,12 +801,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_boolean_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterBoolean_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitBoolean_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitBoolean_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -897,12 +868,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_function_definition; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFunction_definition(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFunction_definition(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFunction_definition(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -981,12 +949,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_numeric_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterNumeric_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitNumeric_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitNumeric_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1039,12 +1004,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_set_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterSet_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitSet_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitSet_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1130,12 +1092,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterStatement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitStatement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitStatement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1240,31 +1199,42 @@ public class EgyParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Assignment_statementContext extends ParserRuleContext {
-		public LvalueContext lvalue() {
-			return getRuleContext(LvalueContext.class,0);
+		public List<LvalueContext> lvalue() {
+			return getRuleContexts(LvalueContext.class);
 		}
-		public TerminalNode ASSIGN() { return getToken(EgyParser.ASSIGN, 0); }
-		public Logical_expressionContext logical_expression() {
-			return getRuleContext(Logical_expressionContext.class,0);
+		public LvalueContext lvalue(int i) {
+			return getRuleContext(LvalueContext.class,i);
+		}
+		public List<TerminalNode> ASSIGN() { return getTokens(EgyParser.ASSIGN); }
+		public TerminalNode ASSIGN(int i) {
+			return getToken(EgyParser.ASSIGN, i);
+		}
+		public List<Logical_expressionContext> logical_expression() {
+			return getRuleContexts(Logical_expressionContext.class);
+		}
+		public Logical_expressionContext logical_expression(int i) {
+			return getRuleContext(Logical_expressionContext.class,i);
 		}
 		public TerminalNode SEMICOLON() { return getToken(EgyParser.SEMICOLON, 0); }
+		public List<TerminalNode> COMMA() { return getTokens(EgyParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(EgyParser.COMMA, i);
+		}
 		public Assignment_statementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_assignment_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterAssignment_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitAssignment_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitAssignment_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
 	public final Assignment_statementContext assignment_statement() throws RecognitionException {
 		Assignment_statementContext _localctx = new Assignment_statementContext(_ctx, getState());
 		enterRule(_localctx, 28, RULE_assignment_statement);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1274,7 +1244,27 @@ public class EgyParser extends Parser {
 			match(ASSIGN);
 			setState(207);
 			logical_expression();
-			setState(208);
+			setState(215);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==COMMA) {
+				{
+				{
+				setState(208);
+				match(COMMA);
+				setState(209);
+				lvalue();
+				setState(210);
+				match(ASSIGN);
+				setState(211);
+				logical_expression();
+				}
+				}
+				setState(217);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(218);
 			match(SEMICOLON);
 			}
 		}
@@ -1292,29 +1282,45 @@ public class EgyParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class Const_initialization_statementContext extends ParserRuleContext {
 		public TerminalNode CONST() { return getToken(EgyParser.CONST, 0); }
-		public LvalueContext lvalue() {
-			return getRuleContext(LvalueContext.class,0);
+		public List<LvalueContext> lvalue() {
+			return getRuleContexts(LvalueContext.class);
 		}
-		public TerminalNode ASSIGN() { return getToken(EgyParser.ASSIGN, 0); }
-		public Logical_expressionContext logical_expression() {
-			return getRuleContext(Logical_expressionContext.class,0);
+		public LvalueContext lvalue(int i) {
+			return getRuleContext(LvalueContext.class,i);
+		}
+		public List<TerminalNode> ASSIGN() { return getTokens(EgyParser.ASSIGN); }
+		public TerminalNode ASSIGN(int i) {
+			return getToken(EgyParser.ASSIGN, i);
+		}
+		public List<Logical_expressionContext> logical_expression() {
+			return getRuleContexts(Logical_expressionContext.class);
+		}
+		public Logical_expressionContext logical_expression(int i) {
+			return getRuleContext(Logical_expressionContext.class,i);
 		}
 		public TerminalNode SEMICOLON() { return getToken(EgyParser.SEMICOLON, 0); }
-		public TerminalNode COLON() { return getToken(EgyParser.COLON, 0); }
-		public TypeContext type() {
-			return getRuleContext(TypeContext.class,0);
+		public List<TerminalNode> COLON() { return getTokens(EgyParser.COLON); }
+		public TerminalNode COLON(int i) {
+			return getToken(EgyParser.COLON, i);
+		}
+		public List<TypeContext> type() {
+			return getRuleContexts(TypeContext.class);
+		}
+		public TypeContext type(int i) {
+			return getRuleContext(TypeContext.class,i);
+		}
+		public List<TerminalNode> COMMA() { return getTokens(EgyParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(EgyParser.COMMA, i);
 		}
 		public Const_initialization_statementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_const_initialization_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterConst_initialization_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitConst_initialization_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitConst_initialization_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1325,27 +1331,59 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(210);
+			setState(220);
 			match(CONST);
-			setState(211);
+			setState(221);
 			lvalue();
-			setState(214);
+			setState(224);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==COLON) {
 				{
-				setState(212);
+				setState(222);
 				match(COLON);
-				setState(213);
+				setState(223);
 				type();
 				}
 			}
 
-			setState(216);
+			setState(226);
 			match(ASSIGN);
-			setState(217);
+			setState(227);
 			logical_expression();
-			setState(218);
+			setState(239);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==COMMA) {
+				{
+				{
+				setState(228);
+				match(COMMA);
+				setState(229);
+				lvalue();
+				setState(232);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==COLON) {
+					{
+					setState(230);
+					match(COLON);
+					setState(231);
+					type();
+					}
+				}
+
+				setState(234);
+				match(ASSIGN);
+				setState(235);
+				logical_expression();
+				}
+				}
+				setState(241);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(242);
 			match(SEMICOLON);
 			}
 		}
@@ -1363,43 +1401,82 @@ public class EgyParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class Declaration_statementContext extends ParserRuleContext {
 		public TerminalNode LET() { return getToken(EgyParser.LET, 0); }
-		public LvalueContext lvalue() {
-			return getRuleContext(LvalueContext.class,0);
+		public List<LvalueContext> lvalue() {
+			return getRuleContexts(LvalueContext.class);
 		}
-		public TerminalNode COLON() { return getToken(EgyParser.COLON, 0); }
-		public TypeContext type() {
-			return getRuleContext(TypeContext.class,0);
+		public LvalueContext lvalue(int i) {
+			return getRuleContext(LvalueContext.class,i);
+		}
+		public List<TerminalNode> COLON() { return getTokens(EgyParser.COLON); }
+		public TerminalNode COLON(int i) {
+			return getToken(EgyParser.COLON, i);
+		}
+		public List<TypeContext> type() {
+			return getRuleContexts(TypeContext.class);
+		}
+		public TypeContext type(int i) {
+			return getRuleContext(TypeContext.class,i);
 		}
 		public TerminalNode SEMICOLON() { return getToken(EgyParser.SEMICOLON, 0); }
+		public List<TerminalNode> COMMA() { return getTokens(EgyParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(EgyParser.COMMA, i);
+		}
 		public Declaration_statementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_declaration_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterDeclaration_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitDeclaration_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitDeclaration_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
 	public final Declaration_statementContext declaration_statement() throws RecognitionException {
 		Declaration_statementContext _localctx = new Declaration_statementContext(_ctx, getState());
 		enterRule(_localctx, 32, RULE_declaration_statement);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(220);
+			setState(244);
 			match(LET);
-			setState(221);
+			setState(245);
 			lvalue();
-			setState(222);
+			setState(246);
 			match(COLON);
-			setState(223);
+			setState(247);
 			type();
-			setState(224);
+			setState(256);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==COMMA) {
+				{
+				{
+				setState(248);
+				match(COMMA);
+				setState(249);
+				lvalue();
+				setState(252);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==COLON) {
+					{
+					setState(250);
+					match(COLON);
+					setState(251);
+					type();
+					}
+				}
+
+				}
+				}
+				setState(258);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(259);
 			match(SEMICOLON);
 			}
 		}
@@ -1417,29 +1494,45 @@ public class EgyParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class Initialization_statementContext extends ParserRuleContext {
 		public TerminalNode LET() { return getToken(EgyParser.LET, 0); }
-		public LvalueContext lvalue() {
-			return getRuleContext(LvalueContext.class,0);
+		public List<LvalueContext> lvalue() {
+			return getRuleContexts(LvalueContext.class);
 		}
-		public TerminalNode ASSIGN() { return getToken(EgyParser.ASSIGN, 0); }
-		public Logical_expressionContext logical_expression() {
-			return getRuleContext(Logical_expressionContext.class,0);
+		public LvalueContext lvalue(int i) {
+			return getRuleContext(LvalueContext.class,i);
+		}
+		public List<TerminalNode> ASSIGN() { return getTokens(EgyParser.ASSIGN); }
+		public TerminalNode ASSIGN(int i) {
+			return getToken(EgyParser.ASSIGN, i);
+		}
+		public List<Logical_expressionContext> logical_expression() {
+			return getRuleContexts(Logical_expressionContext.class);
+		}
+		public Logical_expressionContext logical_expression(int i) {
+			return getRuleContext(Logical_expressionContext.class,i);
 		}
 		public TerminalNode SEMICOLON() { return getToken(EgyParser.SEMICOLON, 0); }
-		public TerminalNode COLON() { return getToken(EgyParser.COLON, 0); }
-		public TypeContext type() {
-			return getRuleContext(TypeContext.class,0);
+		public List<TerminalNode> COLON() { return getTokens(EgyParser.COLON); }
+		public TerminalNode COLON(int i) {
+			return getToken(EgyParser.COLON, i);
+		}
+		public List<TypeContext> type() {
+			return getRuleContexts(TypeContext.class);
+		}
+		public TypeContext type(int i) {
+			return getRuleContext(TypeContext.class,i);
+		}
+		public List<TerminalNode> COMMA() { return getTokens(EgyParser.COMMA); }
+		public TerminalNode COMMA(int i) {
+			return getToken(EgyParser.COMMA, i);
 		}
 		public Initialization_statementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_initialization_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterInitialization_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitInitialization_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitInitialization_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1450,27 +1543,59 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(226);
+			setState(261);
 			match(LET);
-			setState(227);
+			setState(262);
 			lvalue();
-			setState(230);
+			setState(265);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==COLON) {
 				{
-				setState(228);
+				setState(263);
 				match(COLON);
-				setState(229);
+				setState(264);
 				type();
 				}
 			}
 
-			setState(232);
+			setState(267);
 			match(ASSIGN);
-			setState(233);
+			setState(268);
 			logical_expression();
-			setState(234);
+			setState(280);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while (_la==COMMA) {
+				{
+				{
+				setState(269);
+				match(COMMA);
+				setState(270);
+				lvalue();
+				setState(273);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+				if (_la==COLON) {
+					{
+					setState(271);
+					match(COLON);
+					setState(272);
+					type();
+					}
+				}
+
+				setState(275);
+				match(ASSIGN);
+				setState(276);
+				logical_expression();
+				}
+				}
+				setState(282);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(283);
 			match(SEMICOLON);
 			}
 		}
@@ -1510,12 +1635,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_lvalue; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterLvalue(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitLvalue(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitLvalue(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1524,36 +1646,36 @@ public class EgyParser extends Parser {
 		enterRule(_localctx, 36, RULE_lvalue);
 		int _la;
 		try {
-			setState(247);
+			setState(296);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,18,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,25,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(236);
+				setState(285);
 				function_call();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(237);
+				setState(286);
 				match(ID);
-				setState(244);
+				setState(293);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==LBRACKET) {
 					{
 					{
-					setState(238);
+					setState(287);
 					match(LBRACKET);
-					setState(239);
+					setState(288);
 					simple_expression();
-					setState(240);
+					setState(289);
 					match(RBRACKET);
 					}
 					}
-					setState(246);
+					setState(295);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -1597,12 +1719,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_rvalue; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterRvalue(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitRvalue(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitRvalue(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1611,36 +1730,36 @@ public class EgyParser extends Parser {
 		enterRule(_localctx, 38, RULE_rvalue);
 		int _la;
 		try {
-			setState(260);
+			setState(309);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,20,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,27,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(249);
+				setState(298);
 				function_call();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(250);
+				setState(299);
 				match(ID);
-				setState(257);
+				setState(306);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==LBRACKET) {
 					{
 					{
-					setState(251);
+					setState(300);
 					match(LBRACKET);
-					setState(252);
+					setState(301);
 					simple_expression();
-					setState(253);
+					setState(302);
 					match(RBRACKET);
 					}
 					}
-					setState(259);
+					setState(308);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -1692,12 +1811,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_function_call; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFunction_call(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFunction_call(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFunction_call(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1709,53 +1825,53 @@ public class EgyParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(262);
+			setState(311);
 			match(ID);
-			setState(263);
+			setState(312);
 			match(LPAREN);
-			setState(265);
+			setState(314);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 2738188573574463498L) != 0)) {
 				{
-				setState(264);
+				setState(313);
 				argument_list();
 				}
 			}
 
-			setState(267);
+			setState(316);
 			match(RPAREN);
-			setState(274);
+			setState(323);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,22,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(268);
+					setState(317);
 					match(LBRACKET);
-					setState(269);
+					setState(318);
 					simple_expression();
-					setState(270);
+					setState(319);
 					match(RBRACKET);
 					}
 					} 
 				}
-				setState(276);
+				setState(325);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,22,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
 			}
-			setState(280);
+			setState(329);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==LBRACKET || _la==LPAREN) {
 				{
 				{
-				setState(277);
+				setState(326);
 				function_call_suffix();
 				}
 				}
-				setState(282);
+				setState(331);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1789,12 +1905,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_function_call_suffix; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFunction_call_suffix(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFunction_call_suffix(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFunction_call_suffix(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1803,36 +1916,36 @@ public class EgyParser extends Parser {
 		enterRule(_localctx, 42, RULE_function_call_suffix);
 		int _la;
 		try {
-			setState(292);
+			setState(341);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case LPAREN:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(283);
+				setState(332);
 				match(LPAREN);
-				setState(285);
+				setState(334);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 2738188573574463498L) != 0)) {
 					{
-					setState(284);
+					setState(333);
 					argument_list();
 					}
 				}
 
-				setState(287);
+				setState(336);
 				match(RPAREN);
 				}
 				break;
 			case LBRACKET:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(288);
+				setState(337);
 				match(LBRACKET);
-				setState(289);
+				setState(338);
 				simple_expression();
-				setState(290);
+				setState(339);
 				match(RBRACKET);
 				}
 				break;
@@ -1868,12 +1981,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_argument_list; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterArgument_list(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitArgument_list(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitArgument_list(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1884,21 +1994,21 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(294);
+			setState(343);
 			simple_expression();
-			setState(299);
+			setState(348);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(295);
+				setState(344);
 				match(COMMA);
-				setState(296);
+				setState(345);
 				simple_expression();
 				}
 				}
-				setState(301);
+				setState(350);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1930,12 +2040,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_compound_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterCompound_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitCompound_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitCompound_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -1946,23 +2053,23 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(302);
+			setState(351);
 			match(LBRACE);
-			setState(306);
+			setState(355);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1837713326088L) != 0)) {
 				{
 				{
-				setState(303);
+				setState(352);
 				statement();
 				}
 				}
-				setState(308);
+				setState(357);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(309);
+			setState(358);
 			match(RBRACE);
 			}
 		}
@@ -1992,12 +2099,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_do_while_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterDo_while_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitDo_while_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitDo_while_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2007,13 +2111,13 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(311);
+			setState(360);
 			match(DO);
-			setState(312);
+			setState(361);
 			statement();
-			setState(313);
+			setState(362);
 			match(WHILE);
-			setState(314);
+			setState(363);
 			logical_expression();
 			}
 		}
@@ -2042,12 +2146,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_while_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterWhile_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitWhile_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitWhile_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2057,11 +2158,11 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(316);
+			setState(365);
 			match(WHILE);
-			setState(317);
+			setState(366);
 			logical_expression();
-			setState(318);
+			setState(367);
 			statement();
 			}
 		}
@@ -2092,12 +2193,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_repeat_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterRepeat_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitRepeat_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitRepeat_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2107,15 +2205,15 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(320);
+			setState(369);
 			match(REPEAT);
-			setState(321);
+			setState(370);
 			statement();
-			setState(322);
+			setState(371);
 			match(UNTIL);
-			setState(323);
+			setState(372);
 			logical_expression();
-			setState(324);
+			setState(373);
 			match(SEMICOLON);
 			}
 		}
@@ -2146,12 +2244,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_for_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFor_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFor_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFor_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2161,15 +2256,15 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(326);
+			setState(375);
 			match(FOR);
-			setState(327);
+			setState(376);
 			match(ID);
-			setState(328);
+			setState(377);
 			match(IN);
-			setState(329);
+			setState(378);
 			for_iterable();
-			setState(330);
+			setState(379);
 			statement();
 			}
 		}
@@ -2198,12 +2293,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_for_iterable; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFor_iterable(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFor_iterable(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFor_iterable(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2211,27 +2303,27 @@ public class EgyParser extends Parser {
 		For_iterableContext _localctx = new For_iterableContext(_ctx, getState());
 		enterRule(_localctx, 56, RULE_for_iterable);
 		try {
-			setState(335);
+			setState(384);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,35,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(332);
+				setState(381);
 				match(ID);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(333);
+				setState(382);
 				set_literal();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(334);
+				setState(383);
 				simple_expression();
 				}
 				break;
@@ -2266,12 +2358,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_if_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterIf_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitIf_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitIf_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2281,20 +2370,20 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(337);
+			setState(386);
 			match(IF);
-			setState(338);
+			setState(387);
 			logical_expression();
-			setState(339);
+			setState(388);
 			statement();
-			setState(342);
+			setState(391);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,29,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,36,_ctx) ) {
 			case 1:
 				{
-				setState(340);
+				setState(389);
 				match(ELSE);
-				setState(341);
+				setState(390);
 				statement();
 				}
 				break;
@@ -2333,12 +2422,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_print_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterPrint_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitPrint_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitPrint_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2349,31 +2435,31 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(344);
+			setState(393);
 			match(PRINT);
-			setState(345);
+			setState(394);
 			match(LPAREN);
-			setState(346);
+			setState(395);
 			simple_expression();
-			setState(351);
+			setState(400);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(347);
+				setState(396);
 				match(COMMA);
-				setState(348);
+				setState(397);
 				simple_expression();
 				}
 				}
-				setState(353);
+				setState(402);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(354);
+			setState(403);
 			match(RPAREN);
-			setState(355);
+			setState(404);
 			match(SEMICOLON);
 			}
 		}
@@ -2400,12 +2486,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_return_statement; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterReturn_statement(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitReturn_statement(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitReturn_statement(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2415,11 +2498,11 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(357);
+			setState(406);
 			match(RETURN);
-			setState(358);
+			setState(407);
 			logical_expression();
-			setState(359);
+			setState(408);
 			match(SEMICOLON);
 			}
 		}
@@ -2450,12 +2533,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_logical_expression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterLogical_expression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitLogical_expression(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitLogical_expression(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2466,14 +2546,14 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(361);
+			setState(410);
 			relational_expression();
-			setState(364);
+			setState(413);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,31,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,38,_ctx) ) {
 			case 1:
 				{
-				setState(362);
+				setState(411);
 				((Logical_expressionContext)_localctx).op = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !(_la==AND || _la==OR) ) {
@@ -2484,7 +2564,7 @@ public class EgyParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(363);
+				setState(412);
 				relational_expression();
 				}
 				break;
@@ -2523,12 +2603,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_relational_expression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterRelational_expression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitRelational_expression(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitRelational_expression(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2539,14 +2616,14 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(366);
+			setState(415);
 			simple_expression();
-			setState(369);
+			setState(418);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,32,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,39,_ctx) ) {
 			case 1:
 				{
-				setState(367);
+				setState(416);
 				((Relational_expressionContext)_localctx).op = _input.LT(1);
 				_la = _input.LA(1);
 				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 554222579875840L) != 0)) ) {
@@ -2557,7 +2634,7 @@ public class EgyParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(368);
+				setState(417);
 				simple_expression();
 				}
 				break;
@@ -2580,7 +2657,7 @@ public class EgyParser extends Parser {
 		public Token PLUS;
 		public List<Token> op = new ArrayList<Token>();
 		public Token MINUS;
-		public Token _tset777;
+		public Token _tset852;
 		public List<TermContext> term() {
 			return getRuleContexts(TermContext.class);
 		}
@@ -2600,12 +2677,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_simple_expression; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterSimple_expression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitSimple_expression(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitSimple_expression(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2617,35 +2691,35 @@ public class EgyParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(371);
+			setState(420);
 			term();
-			setState(376);
+			setState(425);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(372);
-					((Simple_expressionContext)_localctx)._tset777 = _input.LT(1);
+					setState(421);
+					((Simple_expressionContext)_localctx)._tset852 = _input.LT(1);
 					_la = _input.LA(1);
 					if ( !(_la==PLUS || _la==MINUS) ) {
-						((Simple_expressionContext)_localctx)._tset777 = (Token)_errHandler.recoverInline(this);
+						((Simple_expressionContext)_localctx)._tset852 = (Token)_errHandler.recoverInline(this);
 					}
 					else {
 						if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
 						_errHandler.reportMatch(this);
 						consume();
 					}
-					((Simple_expressionContext)_localctx).op.add(((Simple_expressionContext)_localctx)._tset777);
-					setState(373);
+					((Simple_expressionContext)_localctx).op.add(((Simple_expressionContext)_localctx)._tset852);
+					setState(422);
 					term();
 					}
 					} 
 				}
-				setState(378);
+				setState(427);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,33,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,40,_ctx);
 			}
 			}
 		}
@@ -2668,7 +2742,7 @@ public class EgyParser extends Parser {
 		public Token MOD;
 		public Token LSHIFT;
 		public Token RSHIFT;
-		public Token _tset800;
+		public Token _tset875;
 		public List<FactorContext> factor() {
 			return getRuleContexts(FactorContext.class);
 		}
@@ -2700,12 +2774,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_term; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterTerm(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitTerm(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitTerm(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2717,35 +2788,35 @@ public class EgyParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(379);
+			setState(428);
 			factor();
-			setState(384);
+			setState(433);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,41,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(380);
-					((TermContext)_localctx)._tset800 = _input.LT(1);
+					setState(429);
+					((TermContext)_localctx)._tset875 = _input.LT(1);
 					_la = _input.LA(1);
 					if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 69805794224242688L) != 0)) ) {
-						((TermContext)_localctx)._tset800 = (Token)_errHandler.recoverInline(this);
+						((TermContext)_localctx)._tset875 = (Token)_errHandler.recoverInline(this);
 					}
 					else {
 						if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
 						_errHandler.reportMatch(this);
 						consume();
 					}
-					((TermContext)_localctx).op.add(((TermContext)_localctx)._tset800);
-					setState(381);
+					((TermContext)_localctx).op.add(((TermContext)_localctx)._tset875);
+					setState(430);
 					factor();
 					}
 					} 
 				}
-				setState(386);
+				setState(435);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,34,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,41,_ctx);
 			}
 			}
 		}
@@ -2778,12 +2849,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_factor; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterFactor(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitFactor(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitFactor(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2794,25 +2862,25 @@ public class EgyParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(387);
+			setState(436);
 			base();
-			setState(392);
+			setState(441);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,35,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,42,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(388);
+					setState(437);
 					((FactorContext)_localctx).op = match(POW);
-					setState(389);
+					setState(438);
 					base();
 					}
 					} 
 				}
-				setState(394);
+				setState(443);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,35,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,42,_ctx);
 			}
 			}
 		}
@@ -2852,12 +2920,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_base; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterBase(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitBase(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitBase(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2865,38 +2930,38 @@ public class EgyParser extends Parser {
 		BaseContext _localctx = new BaseContext(_ctx, getState());
 		enterRule(_localctx, 74, RULE_base);
 		try {
-			setState(402);
+			setState(451);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,36,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,43,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(395);
+				setState(444);
 				match(LPAREN);
-				setState(396);
+				setState(445);
 				((BaseContext)_localctx).fle = logical_expression();
-				setState(397);
+				setState(446);
 				match(RPAREN);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(399);
+				setState(448);
 				((BaseContext)_localctx).fl = literal();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(400);
+				setState(449);
 				((BaseContext)_localctx).fi = rvalue();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(401);
+				setState(450);
 				((BaseContext)_localctx).fn = negation();
 				}
 				break;
@@ -2924,12 +2989,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_negation; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterNegation(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitNegation(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitNegation(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2939,9 +3001,9 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(404);
+			setState(453);
 			match(NOT);
-			setState(405);
+			setState(454);
 			factor();
 			}
 		}
@@ -2969,12 +3031,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_char_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterChar_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitChar_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitChar_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -2982,28 +3041,28 @@ public class EgyParser extends Parser {
 		Char_literalContext _localctx = new Char_literalContext(_ctx, getState());
 		enterRule(_localctx, 78, RULE_char_literal);
 		try {
-			setState(413);
+			setState(462);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,37,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,44,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(407);
+				setState(456);
 				match(SINGLEQUOTE);
-				setState(408);
+				setState(457);
 				match(SingleCharacter);
-				setState(409);
+				setState(458);
 				match(SINGLEQUOTE);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(410);
+				setState(459);
 				match(SINGLEQUOTE);
-				setState(411);
+				setState(460);
 				match(EscapeSequence);
-				setState(412);
+				setState(461);
 				match(SINGLEQUOTE);
 				}
 				break;
@@ -3029,12 +3088,9 @@ public class EgyParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_string_literal; }
 		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).enterString_literal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EgyListener ) ((EgyListener)listener).exitString_literal(this);
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EgyVisitor ) return ((EgyVisitor<? extends T>)visitor).visitString_literal(this);
+			else return visitor.visitChildren(this);
 		}
 	}
 
@@ -3044,9 +3100,9 @@ public class EgyParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(415);
+			setState(464);
 			match(UnterminatedStringLiteral);
-			setState(416);
+			setState(465);
 			match(DOUBLEQUOTE);
 			}
 		}
@@ -3062,7 +3118,7 @@ public class EgyParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001>\u01a3\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001>\u01d4\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
@@ -3092,59 +3148,67 @@ public class EgyParser extends Parser {
 		"\f\u0001\f\u0005\f\u00ba\b\f\n\f\f\f\u00bd\t\f\u0001\f\u0001\f\u0001\r"+
 		"\u0001\r\u0001\r\u0001\r\u0001\r\u0001\r\u0001\r\u0001\r\u0001\r\u0001"+
 		"\r\u0001\r\u0003\r\u00cc\b\r\u0001\u000e\u0001\u000e\u0001\u000e\u0001"+
-		"\u000e\u0001\u000e\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0003"+
-		"\u000f\u00d7\b\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0001"+
-		"\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001"+
-		"\u0011\u0001\u0011\u0001\u0011\u0001\u0011\u0003\u0011\u00e7\b\u0011\u0001"+
-		"\u0011\u0001\u0011\u0001\u0011\u0001\u0011\u0001\u0012\u0001\u0012\u0001"+
-		"\u0012\u0001\u0012\u0001\u0012\u0001\u0012\u0005\u0012\u00f3\b\u0012\n"+
-		"\u0012\f\u0012\u00f6\t\u0012\u0003\u0012\u00f8\b\u0012\u0001\u0013\u0001"+
-		"\u0013\u0001\u0013\u0001\u0013\u0001\u0013\u0001\u0013\u0005\u0013\u0100"+
-		"\b\u0013\n\u0013\f\u0013\u0103\t\u0013\u0003\u0013\u0105\b\u0013\u0001"+
-		"\u0014\u0001\u0014\u0001\u0014\u0003\u0014\u010a\b\u0014\u0001\u0014\u0001"+
-		"\u0014\u0001\u0014\u0001\u0014\u0001\u0014\u0005\u0014\u0111\b\u0014\n"+
-		"\u0014\f\u0014\u0114\t\u0014\u0001\u0014\u0005\u0014\u0117\b\u0014\n\u0014"+
-		"\f\u0014\u011a\t\u0014\u0001\u0015\u0001\u0015\u0003\u0015\u011e\b\u0015"+
+		"\u000e\u0001\u000e\u0001\u000e\u0001\u000e\u0001\u000e\u0005\u000e\u00d6"+
+		"\b\u000e\n\u000e\f\u000e\u00d9\t\u000e\u0001\u000e\u0001\u000e\u0001\u000f"+
+		"\u0001\u000f\u0001\u000f\u0001\u000f\u0003\u000f\u00e1\b\u000f\u0001\u000f"+
+		"\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0003\u000f"+
+		"\u00e9\b\u000f\u0001\u000f\u0001\u000f\u0001\u000f\u0005\u000f\u00ee\b"+
+		"\u000f\n\u000f\f\u000f\u00f1\t\u000f\u0001\u000f\u0001\u000f\u0001\u0010"+
+		"\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010\u0001\u0010"+
+		"\u0001\u0010\u0003\u0010\u00fd\b\u0010\u0005\u0010\u00ff\b\u0010\n\u0010"+
+		"\f\u0010\u0102\t\u0010\u0001\u0010\u0001\u0010\u0001\u0011\u0001\u0011"+
+		"\u0001\u0011\u0001\u0011\u0003\u0011\u010a\b\u0011\u0001\u0011\u0001\u0011"+
+		"\u0001\u0011\u0001\u0011\u0001\u0011\u0001\u0011\u0003\u0011\u0112\b\u0011"+
+		"\u0001\u0011\u0001\u0011\u0001\u0011\u0005\u0011\u0117\b\u0011\n\u0011"+
+		"\f\u0011\u011a\t\u0011\u0001\u0011\u0001\u0011\u0001\u0012\u0001\u0012"+
+		"\u0001\u0012\u0001\u0012\u0001\u0012\u0001\u0012\u0005\u0012\u0124\b\u0012"+
+		"\n\u0012\f\u0012\u0127\t\u0012\u0003\u0012\u0129\b\u0012\u0001\u0013\u0001"+
+		"\u0013\u0001\u0013\u0001\u0013\u0001\u0013\u0001\u0013\u0005\u0013\u0131"+
+		"\b\u0013\n\u0013\f\u0013\u0134\t\u0013\u0003\u0013\u0136\b\u0013\u0001"+
+		"\u0014\u0001\u0014\u0001\u0014\u0003\u0014\u013b\b\u0014\u0001\u0014\u0001"+
+		"\u0014\u0001\u0014\u0001\u0014\u0001\u0014\u0005\u0014\u0142\b\u0014\n"+
+		"\u0014\f\u0014\u0145\t\u0014\u0001\u0014\u0005\u0014\u0148\b\u0014\n\u0014"+
+		"\f\u0014\u014b\t\u0014\u0001\u0015\u0001\u0015\u0003\u0015\u014f\b\u0015"+
 		"\u0001\u0015\u0001\u0015\u0001\u0015\u0001\u0015\u0001\u0015\u0003\u0015"+
-		"\u0125\b\u0015\u0001\u0016\u0001\u0016\u0001\u0016\u0005\u0016\u012a\b"+
-		"\u0016\n\u0016\f\u0016\u012d\t\u0016\u0001\u0017\u0001\u0017\u0005\u0017"+
-		"\u0131\b\u0017\n\u0017\f\u0017\u0134\t\u0017\u0001\u0017\u0001\u0017\u0001"+
+		"\u0156\b\u0015\u0001\u0016\u0001\u0016\u0001\u0016\u0005\u0016\u015b\b"+
+		"\u0016\n\u0016\f\u0016\u015e\t\u0016\u0001\u0017\u0001\u0017\u0005\u0017"+
+		"\u0162\b\u0017\n\u0017\f\u0017\u0165\t\u0017\u0001\u0017\u0001\u0017\u0001"+
 		"\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0019\u0001"+
 		"\u0019\u0001\u0019\u0001\u0019\u0001\u001a\u0001\u001a\u0001\u001a\u0001"+
 		"\u001a\u0001\u001a\u0001\u001a\u0001\u001b\u0001\u001b\u0001\u001b\u0001"+
 		"\u001b\u0001\u001b\u0001\u001b\u0001\u001c\u0001\u001c\u0001\u001c\u0003"+
-		"\u001c\u0150\b\u001c\u0001\u001d\u0001\u001d\u0001\u001d\u0001\u001d\u0001"+
-		"\u001d\u0003\u001d\u0157\b\u001d\u0001\u001e\u0001\u001e\u0001\u001e\u0001"+
-		"\u001e\u0001\u001e\u0005\u001e\u015e\b\u001e\n\u001e\f\u001e\u0161\t\u001e"+
+		"\u001c\u0181\b\u001c\u0001\u001d\u0001\u001d\u0001\u001d\u0001\u001d\u0001"+
+		"\u001d\u0003\u001d\u0188\b\u001d\u0001\u001e\u0001\u001e\u0001\u001e\u0001"+
+		"\u001e\u0001\u001e\u0005\u001e\u018f\b\u001e\n\u001e\f\u001e\u0192\t\u001e"+
 		"\u0001\u001e\u0001\u001e\u0001\u001e\u0001\u001f\u0001\u001f\u0001\u001f"+
-		"\u0001\u001f\u0001 \u0001 \u0001 \u0003 \u016d\b \u0001!\u0001!\u0001"+
-		"!\u0003!\u0172\b!\u0001\"\u0001\"\u0001\"\u0005\"\u0177\b\"\n\"\f\"\u017a"+
-		"\t\"\u0001#\u0001#\u0001#\u0005#\u017f\b#\n#\f#\u0182\t#\u0001$\u0001"+
-		"$\u0001$\u0005$\u0187\b$\n$\f$\u018a\t$\u0001%\u0001%\u0001%\u0001%\u0001"+
-		"%\u0001%\u0001%\u0003%\u0193\b%\u0001&\u0001&\u0001&\u0001\'\u0001\'\u0001"+
-		"\'\u0001\'\u0001\'\u0001\'\u0003\'\u019e\b\'\u0001(\u0001(\u0001(\u0001"+
+		"\u0001\u001f\u0001 \u0001 \u0001 \u0003 \u019e\b \u0001!\u0001!\u0001"+
+		"!\u0003!\u01a3\b!\u0001\"\u0001\"\u0001\"\u0005\"\u01a8\b\"\n\"\f\"\u01ab"+
+		"\t\"\u0001#\u0001#\u0001#\u0005#\u01b0\b#\n#\f#\u01b3\t#\u0001$\u0001"+
+		"$\u0001$\u0005$\u01b8\b$\n$\f$\u01bb\t$\u0001%\u0001%\u0001%\u0001%\u0001"+
+		"%\u0001%\u0001%\u0003%\u01c4\b%\u0001&\u0001&\u0001&\u0001\'\u0001\'\u0001"+
+		"\'\u0001\'\u0001\'\u0001\'\u0003\'\u01cf\b\'\u0001(\u0001(\u0001(\u0001"+
 		"(\u0000\u0000)\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016"+
 		"\u0018\u001a\u001c\u001e \"$&(*,.02468:<>@BDFHJLNP\u0000\u0006\u0001\u0000"+
 		"\u0014\u0015\u0001\u0000\u0017\u001a\u0001\u0000)*\u0002\u0000$$+0\u0001"+
-		"\u000012\u0001\u000037\u01b6\u0000R\u0001\u0000\u0000\u0000\u0002c\u0001"+
+		"\u000012\u0001\u000037\u01ee\u0000R\u0001\u0000\u0000\u0000\u0002c\u0001"+
 		"\u0000\u0000\u0000\u0004n\u0001\u0000\u0000\u0000\u0006p\u0001\u0000\u0000"+
 		"\u0000\bz\u0001\u0000\u0000\u0000\n\u0084\u0001\u0000\u0000\u0000\f\u008a"+
 		"\u0001\u0000\u0000\u0000\u000e\u008c\u0001\u0000\u0000\u0000\u0010\u009b"+
 		"\u0001\u0000\u0000\u0000\u0012\u009d\u0001\u0000\u0000\u0000\u0014\u009f"+
 		"\u0001\u0000\u0000\u0000\u0016\u00b3\u0001\u0000\u0000\u0000\u0018\u00b5"+
 		"\u0001\u0000\u0000\u0000\u001a\u00cb\u0001\u0000\u0000\u0000\u001c\u00cd"+
-		"\u0001\u0000\u0000\u0000\u001e\u00d2\u0001\u0000\u0000\u0000 \u00dc\u0001"+
-		"\u0000\u0000\u0000\"\u00e2\u0001\u0000\u0000\u0000$\u00f7\u0001\u0000"+
-		"\u0000\u0000&\u0104\u0001\u0000\u0000\u0000(\u0106\u0001\u0000\u0000\u0000"+
-		"*\u0124\u0001\u0000\u0000\u0000,\u0126\u0001\u0000\u0000\u0000.\u012e"+
-		"\u0001\u0000\u0000\u00000\u0137\u0001\u0000\u0000\u00002\u013c\u0001\u0000"+
-		"\u0000\u00004\u0140\u0001\u0000\u0000\u00006\u0146\u0001\u0000\u0000\u0000"+
-		"8\u014f\u0001\u0000\u0000\u0000:\u0151\u0001\u0000\u0000\u0000<\u0158"+
-		"\u0001\u0000\u0000\u0000>\u0165\u0001\u0000\u0000\u0000@\u0169\u0001\u0000"+
-		"\u0000\u0000B\u016e\u0001\u0000\u0000\u0000D\u0173\u0001\u0000\u0000\u0000"+
-		"F\u017b\u0001\u0000\u0000\u0000H\u0183\u0001\u0000\u0000\u0000J\u0192"+
-		"\u0001\u0000\u0000\u0000L\u0194\u0001\u0000\u0000\u0000N\u019d\u0001\u0000"+
-		"\u0000\u0000P\u019f\u0001\u0000\u0000\u0000RV\u0003\u0004\u0002\u0000"+
+		"\u0001\u0000\u0000\u0000\u001e\u00dc\u0001\u0000\u0000\u0000 \u00f4\u0001"+
+		"\u0000\u0000\u0000\"\u0105\u0001\u0000\u0000\u0000$\u0128\u0001\u0000"+
+		"\u0000\u0000&\u0135\u0001\u0000\u0000\u0000(\u0137\u0001\u0000\u0000\u0000"+
+		"*\u0155\u0001\u0000\u0000\u0000,\u0157\u0001\u0000\u0000\u0000.\u015f"+
+		"\u0001\u0000\u0000\u00000\u0168\u0001\u0000\u0000\u00002\u016d\u0001\u0000"+
+		"\u0000\u00004\u0171\u0001\u0000\u0000\u00006\u0177\u0001\u0000\u0000\u0000"+
+		"8\u0180\u0001\u0000\u0000\u0000:\u0182\u0001\u0000\u0000\u0000<\u0189"+
+		"\u0001\u0000\u0000\u0000>\u0196\u0001\u0000\u0000\u0000@\u019a\u0001\u0000"+
+		"\u0000\u0000B\u019f\u0001\u0000\u0000\u0000D\u01a4\u0001\u0000\u0000\u0000"+
+		"F\u01ac\u0001\u0000\u0000\u0000H\u01b4\u0001\u0000\u0000\u0000J\u01c3"+
+		"\u0001\u0000\u0000\u0000L\u01c5\u0001\u0000\u0000\u0000N\u01ce\u0001\u0000"+
+		"\u0000\u0000P\u01d0\u0001\u0000\u0000\u0000RV\u0003\u0004\u0002\u0000"+
 		"SU\u0003\u0002\u0001\u0000TS\u0001\u0000\u0000\u0000UX\u0001\u0000\u0000"+
 		"\u0000VT\u0001\u0000\u0000\u0000VW\u0001\u0000\u0000\u0000W\u0001\u0001"+
 		"\u0000\u0000\u0000XV\u0001\u0000\u0000\u0000Y[\u0005\u0001\u0000\u0000"+
@@ -3215,119 +3279,147 @@ public class EgyParser extends Parser {
 		"\u00cb\u00c8\u0001\u0000\u0000\u0000\u00cb\u00c9\u0001\u0000\u0000\u0000"+
 		"\u00cb\u00ca\u0001\u0000\u0000\u0000\u00cc\u001b\u0001\u0000\u0000\u0000"+
 		"\u00cd\u00ce\u0003$\u0012\u0000\u00ce\u00cf\u0005\u001b\u0000\u0000\u00cf"+
-		"\u00d0\u0003@ \u0000\u00d0\u00d1\u0005\u001c\u0000\u0000\u00d1\u001d\u0001"+
-		"\u0000\u0000\u0000\u00d2\u00d3\u0005\u001d\u0000\u0000\u00d3\u00d6\u0003"+
-		"$\u0012\u0000\u00d4\u00d5\u0005\u000e\u0000\u0000\u00d5\u00d7\u0003\u0000"+
-		"\u0000\u0000\u00d6\u00d4\u0001\u0000\u0000\u0000\u00d6\u00d7\u0001\u0000"+
-		"\u0000\u0000\u00d7\u00d8\u0001\u0000\u0000\u0000\u00d8\u00d9\u0005\u001b"+
-		"\u0000\u0000\u00d9\u00da\u0003@ \u0000\u00da\u00db\u0005\u001c\u0000\u0000"+
-		"\u00db\u001f\u0001\u0000\u0000\u0000\u00dc\u00dd\u0005\u001e\u0000\u0000"+
-		"\u00dd\u00de\u0003$\u0012\u0000\u00de\u00df\u0005\u000e\u0000\u0000\u00df"+
-		"\u00e0\u0003\u0000\u0000\u0000\u00e0\u00e1\u0005\u001c\u0000\u0000\u00e1"+
-		"!\u0001\u0000\u0000\u0000\u00e2\u00e3\u0005\u001e\u0000\u0000\u00e3\u00e6"+
-		"\u0003$\u0012\u0000\u00e4\u00e5\u0005\u000e\u0000\u0000\u00e5\u00e7\u0003"+
-		"\u0000\u0000\u0000\u00e6\u00e4\u0001\u0000\u0000\u0000\u00e6\u00e7\u0001"+
-		"\u0000\u0000\u0000\u00e7\u00e8\u0001\u0000\u0000\u0000\u00e8\u00e9\u0005"+
-		"\u001b\u0000\u0000\u00e9\u00ea\u0003@ \u0000\u00ea\u00eb\u0005\u001c\u0000"+
-		"\u0000\u00eb#\u0001\u0000\u0000\u0000\u00ec\u00f8\u0003(\u0014\u0000\u00ed"+
-		"\u00f4\u0005\u0016\u0000\u0000\u00ee\u00ef\u0005\u0001\u0000\u0000\u00ef"+
-		"\u00f0\u0003D\"\u0000\u00f0\u00f1\u0005\u0002\u0000\u0000\u00f1\u00f3"+
-		"\u0001\u0000\u0000\u0000\u00f2\u00ee\u0001\u0000\u0000\u0000\u00f3\u00f6"+
-		"\u0001\u0000\u0000\u0000\u00f4\u00f2\u0001\u0000\u0000\u0000\u00f4\u00f5"+
-		"\u0001\u0000\u0000\u0000\u00f5\u00f8\u0001\u0000\u0000\u0000\u00f6\u00f4"+
-		"\u0001\u0000\u0000\u0000\u00f7\u00ec\u0001\u0000\u0000\u0000\u00f7\u00ed"+
-		"\u0001\u0000\u0000\u0000\u00f8%\u0001\u0000\u0000\u0000\u00f9\u0105\u0003"+
-		"(\u0014\u0000\u00fa\u0101\u0005\u0016\u0000\u0000\u00fb\u00fc\u0005\u0001"+
-		"\u0000\u0000\u00fc\u00fd\u0003D\"\u0000\u00fd\u00fe\u0005\u0002\u0000"+
-		"\u0000\u00fe\u0100\u0001\u0000\u0000\u0000\u00ff\u00fb\u0001\u0000\u0000"+
-		"\u0000\u0100\u0103\u0001\u0000\u0000\u0000\u0101\u00ff\u0001\u0000\u0000"+
-		"\u0000\u0101\u0102\u0001\u0000\u0000\u0000\u0102\u0105\u0001\u0000\u0000"+
-		"\u0000\u0103\u0101\u0001\u0000\u0000\u0000\u0104\u00f9\u0001\u0000\u0000"+
-		"\u0000\u0104\u00fa\u0001\u0000\u0000\u0000\u0105\'\u0001\u0000\u0000\u0000"+
-		"\u0106\u0107\u0005\u0016\u0000\u0000\u0107\u0109\u0005\u000f\u0000\u0000"+
-		"\u0108\u010a\u0003,\u0016\u0000\u0109\u0108\u0001\u0000\u0000\u0000\u0109"+
-		"\u010a\u0001\u0000\u0000\u0000\u010a\u010b\u0001\u0000\u0000\u0000\u010b"+
-		"\u0112\u0005\u0010\u0000\u0000\u010c\u010d\u0005\u0001\u0000\u0000\u010d"+
-		"\u010e\u0003D\"\u0000\u010e\u010f\u0005\u0002\u0000\u0000\u010f\u0111"+
-		"\u0001\u0000\u0000\u0000\u0110\u010c\u0001\u0000\u0000\u0000\u0111\u0114"+
-		"\u0001\u0000\u0000\u0000\u0112\u0110\u0001\u0000\u0000\u0000\u0112\u0113"+
-		"\u0001\u0000\u0000\u0000\u0113\u0118\u0001\u0000\u0000\u0000\u0114\u0112"+
-		"\u0001\u0000\u0000\u0000\u0115\u0117\u0003*\u0015\u0000\u0116\u0115\u0001"+
-		"\u0000\u0000\u0000\u0117\u011a\u0001\u0000\u0000\u0000\u0118\u0116\u0001"+
-		"\u0000\u0000\u0000\u0118\u0119\u0001\u0000\u0000\u0000\u0119)\u0001\u0000"+
-		"\u0000\u0000\u011a\u0118\u0001\u0000\u0000\u0000\u011b\u011d\u0005\u000f"+
-		"\u0000\u0000\u011c\u011e\u0003,\u0016\u0000\u011d\u011c\u0001\u0000\u0000"+
-		"\u0000\u011d\u011e\u0001\u0000\u0000\u0000\u011e\u011f\u0001\u0000\u0000"+
-		"\u0000\u011f\u0125\u0005\u0010\u0000\u0000\u0120\u0121\u0005\u0001\u0000"+
-		"\u0000\u0121\u0122\u0003D\"\u0000\u0122\u0123\u0005\u0002\u0000\u0000"+
-		"\u0123\u0125\u0001\u0000\u0000\u0000\u0124\u011b\u0001\u0000\u0000\u0000"+
-		"\u0124\u0120\u0001\u0000\u0000\u0000\u0125+\u0001\u0000\u0000\u0000\u0126"+
-		"\u012b\u0003D\"\u0000\u0127\u0128\u0005\u0012\u0000\u0000\u0128\u012a"+
-		"\u0003D\"\u0000\u0129\u0127\u0001\u0000\u0000\u0000\u012a\u012d\u0001"+
-		"\u0000\u0000\u0000\u012b\u0129\u0001\u0000\u0000\u0000\u012b\u012c\u0001"+
-		"\u0000\u0000\u0000\u012c-\u0001\u0000\u0000\u0000\u012d\u012b\u0001\u0000"+
-		"\u0000\u0000\u012e\u0132\u0005\u0003\u0000\u0000\u012f\u0131\u0003\u001a"+
-		"\r\u0000\u0130\u012f\u0001\u0000\u0000\u0000\u0131\u0134\u0001\u0000\u0000"+
-		"\u0000\u0132\u0130\u0001\u0000\u0000\u0000\u0132\u0133\u0001\u0000\u0000"+
-		"\u0000\u0133\u0135\u0001\u0000\u0000\u0000\u0134\u0132\u0001\u0000\u0000"+
-		"\u0000\u0135\u0136\u0005\u0004\u0000\u0000\u0136/\u0001\u0000\u0000\u0000"+
-		"\u0137\u0138\u0005\u001f\u0000\u0000\u0138\u0139\u0003\u001a\r\u0000\u0139"+
-		"\u013a\u0005 \u0000\u0000\u013a\u013b\u0003@ \u0000\u013b1\u0001\u0000"+
-		"\u0000\u0000\u013c\u013d\u0005 \u0000\u0000\u013d\u013e\u0003@ \u0000"+
-		"\u013e\u013f\u0003\u001a\r\u0000\u013f3\u0001\u0000\u0000\u0000\u0140"+
-		"\u0141\u0005!\u0000\u0000\u0141\u0142\u0003\u001a\r\u0000\u0142\u0143"+
-		"\u0005\"\u0000\u0000\u0143\u0144\u0003@ \u0000\u0144\u0145\u0005\u001c"+
-		"\u0000\u0000\u01455\u0001\u0000\u0000\u0000\u0146\u0147\u0005#\u0000\u0000"+
-		"\u0147\u0148\u0005\u0016\u0000\u0000\u0148\u0149\u0005$\u0000\u0000\u0149"+
-		"\u014a\u00038\u001c\u0000\u014a\u014b\u0003\u001a\r\u0000\u014b7\u0001"+
-		"\u0000\u0000\u0000\u014c\u0150\u0005\u0016\u0000\u0000\u014d\u0150\u0003"+
-		"\u0018\f\u0000\u014e\u0150\u0003D\"\u0000\u014f\u014c\u0001\u0000\u0000"+
-		"\u0000\u014f\u014d\u0001\u0000\u0000\u0000\u014f\u014e\u0001\u0000\u0000"+
-		"\u0000\u01509\u0001\u0000\u0000\u0000\u0151\u0152\u0005%\u0000\u0000\u0152"+
-		"\u0153\u0003@ \u0000\u0153\u0156\u0003\u001a\r\u0000\u0154\u0155\u0005"+
-		"&\u0000\u0000\u0155\u0157\u0003\u001a\r\u0000\u0156\u0154\u0001\u0000"+
-		"\u0000\u0000\u0156\u0157\u0001\u0000\u0000\u0000\u0157;\u0001\u0000\u0000"+
-		"\u0000\u0158\u0159\u0005\'\u0000\u0000\u0159\u015a\u0005\u000f\u0000\u0000"+
-		"\u015a\u015f\u0003D\"\u0000\u015b\u015c\u0005\u0012\u0000\u0000\u015c"+
-		"\u015e\u0003D\"\u0000\u015d\u015b\u0001\u0000\u0000\u0000\u015e\u0161"+
-		"\u0001\u0000\u0000\u0000\u015f\u015d\u0001\u0000\u0000\u0000\u015f\u0160"+
-		"\u0001\u0000\u0000\u0000\u0160\u0162\u0001\u0000\u0000\u0000\u0161\u015f"+
-		"\u0001\u0000\u0000\u0000\u0162\u0163\u0005\u0010\u0000\u0000\u0163\u0164"+
-		"\u0005\u001c\u0000\u0000\u0164=\u0001\u0000\u0000\u0000\u0165\u0166\u0005"+
-		"(\u0000\u0000\u0166\u0167\u0003@ \u0000\u0167\u0168\u0005\u001c\u0000"+
-		"\u0000\u0168?\u0001\u0000\u0000\u0000\u0169\u016c\u0003B!\u0000\u016a"+
-		"\u016b\u0007\u0002\u0000\u0000\u016b\u016d\u0003B!\u0000\u016c\u016a\u0001"+
-		"\u0000\u0000\u0000\u016c\u016d\u0001\u0000\u0000\u0000\u016dA\u0001\u0000"+
-		"\u0000\u0000\u016e\u0171\u0003D\"\u0000\u016f\u0170\u0007\u0003\u0000"+
-		"\u0000\u0170\u0172\u0003D\"\u0000\u0171\u016f\u0001\u0000\u0000\u0000"+
-		"\u0171\u0172\u0001\u0000\u0000\u0000\u0172C\u0001\u0000\u0000\u0000\u0173"+
-		"\u0178\u0003F#\u0000\u0174\u0175\u0007\u0004\u0000\u0000\u0175\u0177\u0003"+
-		"F#\u0000\u0176\u0174\u0001\u0000\u0000\u0000\u0177\u017a\u0001\u0000\u0000"+
-		"\u0000\u0178\u0176\u0001\u0000\u0000\u0000\u0178\u0179\u0001\u0000\u0000"+
-		"\u0000\u0179E\u0001\u0000\u0000\u0000\u017a\u0178\u0001\u0000\u0000\u0000"+
-		"\u017b\u0180\u0003H$\u0000\u017c\u017d\u0007\u0005\u0000\u0000\u017d\u017f"+
-		"\u0003H$\u0000\u017e\u017c\u0001\u0000\u0000\u0000\u017f\u0182\u0001\u0000"+
-		"\u0000\u0000\u0180\u017e\u0001\u0000\u0000\u0000\u0180\u0181\u0001\u0000"+
-		"\u0000\u0000\u0181G\u0001\u0000\u0000\u0000\u0182\u0180\u0001\u0000\u0000"+
-		"\u0000\u0183\u0188\u0003J%\u0000\u0184\u0185\u00058\u0000\u0000\u0185"+
-		"\u0187\u0003J%\u0000\u0186\u0184\u0001\u0000\u0000\u0000\u0187\u018a\u0001"+
-		"\u0000\u0000\u0000\u0188\u0186\u0001\u0000\u0000\u0000\u0188\u0189\u0001"+
-		"\u0000\u0000\u0000\u0189I\u0001\u0000\u0000\u0000\u018a\u0188\u0001\u0000"+
-		"\u0000\u0000\u018b\u018c\u0005\u000f\u0000\u0000\u018c\u018d\u0003@ \u0000"+
-		"\u018d\u018e\u0005\u0010\u0000\u0000\u018e\u0193\u0001\u0000\u0000\u0000"+
-		"\u018f\u0193\u0003\f\u0006\u0000\u0190\u0193\u0003&\u0013\u0000\u0191"+
-		"\u0193\u0003L&\u0000\u0192\u018b\u0001\u0000\u0000\u0000\u0192\u018f\u0001"+
-		"\u0000\u0000\u0000\u0192\u0190\u0001\u0000\u0000\u0000\u0192\u0191\u0001"+
-		"\u0000\u0000\u0000\u0193K\u0001\u0000\u0000\u0000\u0194\u0195\u00059\u0000"+
-		"\u0000\u0195\u0196\u0003H$\u0000\u0196M\u0001\u0000\u0000\u0000\u0197"+
-		"\u0198\u0005:\u0000\u0000\u0198\u0199\u0005;\u0000\u0000\u0199\u019e\u0005"+
-		":\u0000\u0000\u019a\u019b\u0005:\u0000\u0000\u019b\u019c\u0005<\u0000"+
-		"\u0000\u019c\u019e\u0005:\u0000\u0000\u019d\u0197\u0001\u0000\u0000\u0000"+
-		"\u019d\u019a\u0001\u0000\u0000\u0000\u019eO\u0001\u0000\u0000\u0000\u019f"+
-		"\u01a0\u0005=\u0000\u0000\u01a0\u01a1\u0005>\u0000\u0000\u01a1Q\u0001"+
-		"\u0000\u0000\u0000&V[`cnt\u007f\u0084\u008a\u0092\u009b\u00a9\u00ac\u00bb"+
-		"\u00cb\u00d6\u00e6\u00f4\u00f7\u0101\u0104\u0109\u0112\u0118\u011d\u0124"+
-		"\u012b\u0132\u014f\u0156\u015f\u016c\u0171\u0178\u0180\u0188\u0192\u019d";
+		"\u00d7\u0003@ \u0000\u00d0\u00d1\u0005\u0012\u0000\u0000\u00d1\u00d2\u0003"+
+		"$\u0012\u0000\u00d2\u00d3\u0005\u001b\u0000\u0000\u00d3\u00d4\u0003@ "+
+		"\u0000\u00d4\u00d6\u0001\u0000\u0000\u0000\u00d5\u00d0\u0001\u0000\u0000"+
+		"\u0000\u00d6\u00d9\u0001\u0000\u0000\u0000\u00d7\u00d5\u0001\u0000\u0000"+
+		"\u0000\u00d7\u00d8\u0001\u0000\u0000\u0000\u00d8\u00da\u0001\u0000\u0000"+
+		"\u0000\u00d9\u00d7\u0001\u0000\u0000\u0000\u00da\u00db\u0005\u001c\u0000"+
+		"\u0000\u00db\u001d\u0001\u0000\u0000\u0000\u00dc\u00dd\u0005\u001d\u0000"+
+		"\u0000\u00dd\u00e0\u0003$\u0012\u0000\u00de\u00df\u0005\u000e\u0000\u0000"+
+		"\u00df\u00e1\u0003\u0000\u0000\u0000\u00e0\u00de\u0001\u0000\u0000\u0000"+
+		"\u00e0\u00e1\u0001\u0000\u0000\u0000\u00e1\u00e2\u0001\u0000\u0000\u0000"+
+		"\u00e2\u00e3\u0005\u001b\u0000\u0000\u00e3\u00ef\u0003@ \u0000\u00e4\u00e5"+
+		"\u0005\u0012\u0000\u0000\u00e5\u00e8\u0003$\u0012\u0000\u00e6\u00e7\u0005"+
+		"\u000e\u0000\u0000\u00e7\u00e9\u0003\u0000\u0000\u0000\u00e8\u00e6\u0001"+
+		"\u0000\u0000\u0000\u00e8\u00e9\u0001\u0000\u0000\u0000\u00e9\u00ea\u0001"+
+		"\u0000\u0000\u0000\u00ea\u00eb\u0005\u001b\u0000\u0000\u00eb\u00ec\u0003"+
+		"@ \u0000\u00ec\u00ee\u0001\u0000\u0000\u0000\u00ed\u00e4\u0001\u0000\u0000"+
+		"\u0000\u00ee\u00f1\u0001\u0000\u0000\u0000\u00ef\u00ed\u0001\u0000\u0000"+
+		"\u0000\u00ef\u00f0\u0001\u0000\u0000\u0000\u00f0\u00f2\u0001\u0000\u0000"+
+		"\u0000\u00f1\u00ef\u0001\u0000\u0000\u0000\u00f2\u00f3\u0005\u001c\u0000"+
+		"\u0000\u00f3\u001f\u0001\u0000\u0000\u0000\u00f4\u00f5\u0005\u001e\u0000"+
+		"\u0000\u00f5\u00f6\u0003$\u0012\u0000\u00f6\u00f7\u0005\u000e\u0000\u0000"+
+		"\u00f7\u0100\u0003\u0000\u0000\u0000\u00f8\u00f9\u0005\u0012\u0000\u0000"+
+		"\u00f9\u00fc\u0003$\u0012\u0000\u00fa\u00fb\u0005\u000e\u0000\u0000\u00fb"+
+		"\u00fd\u0003\u0000\u0000\u0000\u00fc\u00fa\u0001\u0000\u0000\u0000\u00fc"+
+		"\u00fd\u0001\u0000\u0000\u0000\u00fd\u00ff\u0001\u0000\u0000\u0000\u00fe"+
+		"\u00f8\u0001\u0000\u0000\u0000\u00ff\u0102\u0001\u0000\u0000\u0000\u0100"+
+		"\u00fe\u0001\u0000\u0000\u0000\u0100\u0101\u0001\u0000\u0000\u0000\u0101"+
+		"\u0103\u0001\u0000\u0000\u0000\u0102\u0100\u0001\u0000\u0000\u0000\u0103"+
+		"\u0104\u0005\u001c\u0000\u0000\u0104!\u0001\u0000\u0000\u0000\u0105\u0106"+
+		"\u0005\u001e\u0000\u0000\u0106\u0109\u0003$\u0012\u0000\u0107\u0108\u0005"+
+		"\u000e\u0000\u0000\u0108\u010a\u0003\u0000\u0000\u0000\u0109\u0107\u0001"+
+		"\u0000\u0000\u0000\u0109\u010a\u0001\u0000\u0000\u0000\u010a\u010b\u0001"+
+		"\u0000\u0000\u0000\u010b\u010c\u0005\u001b\u0000\u0000\u010c\u0118\u0003"+
+		"@ \u0000\u010d\u010e\u0005\u0012\u0000\u0000\u010e\u0111\u0003$\u0012"+
+		"\u0000\u010f\u0110\u0005\u000e\u0000\u0000\u0110\u0112\u0003\u0000\u0000"+
+		"\u0000\u0111\u010f\u0001\u0000\u0000\u0000\u0111\u0112\u0001\u0000\u0000"+
+		"\u0000\u0112\u0113\u0001\u0000\u0000\u0000\u0113\u0114\u0005\u001b\u0000"+
+		"\u0000\u0114\u0115\u0003@ \u0000\u0115\u0117\u0001\u0000\u0000\u0000\u0116"+
+		"\u010d\u0001\u0000\u0000\u0000\u0117\u011a\u0001\u0000\u0000\u0000\u0118"+
+		"\u0116\u0001\u0000\u0000\u0000\u0118\u0119\u0001\u0000\u0000\u0000\u0119"+
+		"\u011b\u0001\u0000\u0000\u0000\u011a\u0118\u0001\u0000\u0000\u0000\u011b"+
+		"\u011c\u0005\u001c\u0000\u0000\u011c#\u0001\u0000\u0000\u0000\u011d\u0129"+
+		"\u0003(\u0014\u0000\u011e\u0125\u0005\u0016\u0000\u0000\u011f\u0120\u0005"+
+		"\u0001\u0000\u0000\u0120\u0121\u0003D\"\u0000\u0121\u0122\u0005\u0002"+
+		"\u0000\u0000\u0122\u0124\u0001\u0000\u0000\u0000\u0123\u011f\u0001\u0000"+
+		"\u0000\u0000\u0124\u0127\u0001\u0000\u0000\u0000\u0125\u0123\u0001\u0000"+
+		"\u0000\u0000\u0125\u0126\u0001\u0000\u0000\u0000\u0126\u0129\u0001\u0000"+
+		"\u0000\u0000\u0127\u0125\u0001\u0000\u0000\u0000\u0128\u011d\u0001\u0000"+
+		"\u0000\u0000\u0128\u011e\u0001\u0000\u0000\u0000\u0129%\u0001\u0000\u0000"+
+		"\u0000\u012a\u0136\u0003(\u0014\u0000\u012b\u0132\u0005\u0016\u0000\u0000"+
+		"\u012c\u012d\u0005\u0001\u0000\u0000\u012d\u012e\u0003D\"\u0000\u012e"+
+		"\u012f\u0005\u0002\u0000\u0000\u012f\u0131\u0001\u0000\u0000\u0000\u0130"+
+		"\u012c\u0001\u0000\u0000\u0000\u0131\u0134\u0001\u0000\u0000\u0000\u0132"+
+		"\u0130\u0001\u0000\u0000\u0000\u0132\u0133\u0001\u0000\u0000\u0000\u0133"+
+		"\u0136\u0001\u0000\u0000\u0000\u0134\u0132\u0001\u0000\u0000\u0000\u0135"+
+		"\u012a\u0001\u0000\u0000\u0000\u0135\u012b\u0001\u0000\u0000\u0000\u0136"+
+		"\'\u0001\u0000\u0000\u0000\u0137\u0138\u0005\u0016\u0000\u0000\u0138\u013a"+
+		"\u0005\u000f\u0000\u0000\u0139\u013b\u0003,\u0016\u0000\u013a\u0139\u0001"+
+		"\u0000\u0000\u0000\u013a\u013b\u0001\u0000\u0000\u0000\u013b\u013c\u0001"+
+		"\u0000\u0000\u0000\u013c\u0143\u0005\u0010\u0000\u0000\u013d\u013e\u0005"+
+		"\u0001\u0000\u0000\u013e\u013f\u0003D\"\u0000\u013f\u0140\u0005\u0002"+
+		"\u0000\u0000\u0140\u0142\u0001\u0000\u0000\u0000\u0141\u013d\u0001\u0000"+
+		"\u0000\u0000\u0142\u0145\u0001\u0000\u0000\u0000\u0143\u0141\u0001\u0000"+
+		"\u0000\u0000\u0143\u0144\u0001\u0000\u0000\u0000\u0144\u0149\u0001\u0000"+
+		"\u0000\u0000\u0145\u0143\u0001\u0000\u0000\u0000\u0146\u0148\u0003*\u0015"+
+		"\u0000\u0147\u0146\u0001\u0000\u0000\u0000\u0148\u014b\u0001\u0000\u0000"+
+		"\u0000\u0149\u0147\u0001\u0000\u0000\u0000\u0149\u014a\u0001\u0000\u0000"+
+		"\u0000\u014a)\u0001\u0000\u0000\u0000\u014b\u0149\u0001\u0000\u0000\u0000"+
+		"\u014c\u014e\u0005\u000f\u0000\u0000\u014d\u014f\u0003,\u0016\u0000\u014e"+
+		"\u014d\u0001\u0000\u0000\u0000\u014e\u014f\u0001\u0000\u0000\u0000\u014f"+
+		"\u0150\u0001\u0000\u0000\u0000\u0150\u0156\u0005\u0010\u0000\u0000\u0151"+
+		"\u0152\u0005\u0001\u0000\u0000\u0152\u0153\u0003D\"\u0000\u0153\u0154"+
+		"\u0005\u0002\u0000\u0000\u0154\u0156\u0001\u0000\u0000\u0000\u0155\u014c"+
+		"\u0001\u0000\u0000\u0000\u0155\u0151\u0001\u0000\u0000\u0000\u0156+\u0001"+
+		"\u0000\u0000\u0000\u0157\u015c\u0003D\"\u0000\u0158\u0159\u0005\u0012"+
+		"\u0000\u0000\u0159\u015b\u0003D\"\u0000\u015a\u0158\u0001\u0000\u0000"+
+		"\u0000\u015b\u015e\u0001\u0000\u0000\u0000\u015c\u015a\u0001\u0000\u0000"+
+		"\u0000\u015c\u015d\u0001\u0000\u0000\u0000\u015d-\u0001\u0000\u0000\u0000"+
+		"\u015e\u015c\u0001\u0000\u0000\u0000\u015f\u0163\u0005\u0003\u0000\u0000"+
+		"\u0160\u0162\u0003\u001a\r\u0000\u0161\u0160\u0001\u0000\u0000\u0000\u0162"+
+		"\u0165\u0001\u0000\u0000\u0000\u0163\u0161\u0001\u0000\u0000\u0000\u0163"+
+		"\u0164\u0001\u0000\u0000\u0000\u0164\u0166\u0001\u0000\u0000\u0000\u0165"+
+		"\u0163\u0001\u0000\u0000\u0000\u0166\u0167\u0005\u0004\u0000\u0000\u0167"+
+		"/\u0001\u0000\u0000\u0000\u0168\u0169\u0005\u001f\u0000\u0000\u0169\u016a"+
+		"\u0003\u001a\r\u0000\u016a\u016b\u0005 \u0000\u0000\u016b\u016c\u0003"+
+		"@ \u0000\u016c1\u0001\u0000\u0000\u0000\u016d\u016e\u0005 \u0000\u0000"+
+		"\u016e\u016f\u0003@ \u0000\u016f\u0170\u0003\u001a\r\u0000\u01703\u0001"+
+		"\u0000\u0000\u0000\u0171\u0172\u0005!\u0000\u0000\u0172\u0173\u0003\u001a"+
+		"\r\u0000\u0173\u0174\u0005\"\u0000\u0000\u0174\u0175\u0003@ \u0000\u0175"+
+		"\u0176\u0005\u001c\u0000\u0000\u01765\u0001\u0000\u0000\u0000\u0177\u0178"+
+		"\u0005#\u0000\u0000\u0178\u0179\u0005\u0016\u0000\u0000\u0179\u017a\u0005"+
+		"$\u0000\u0000\u017a\u017b\u00038\u001c\u0000\u017b\u017c\u0003\u001a\r"+
+		"\u0000\u017c7\u0001\u0000\u0000\u0000\u017d\u0181\u0005\u0016\u0000\u0000"+
+		"\u017e\u0181\u0003\u0018\f\u0000\u017f\u0181\u0003D\"\u0000\u0180\u017d"+
+		"\u0001\u0000\u0000\u0000\u0180\u017e\u0001\u0000\u0000\u0000\u0180\u017f"+
+		"\u0001\u0000\u0000\u0000\u01819\u0001\u0000\u0000\u0000\u0182\u0183\u0005"+
+		"%\u0000\u0000\u0183\u0184\u0003@ \u0000\u0184\u0187\u0003\u001a\r\u0000"+
+		"\u0185\u0186\u0005&\u0000\u0000\u0186\u0188\u0003\u001a\r\u0000\u0187"+
+		"\u0185\u0001\u0000\u0000\u0000\u0187\u0188\u0001\u0000\u0000\u0000\u0188"+
+		";\u0001\u0000\u0000\u0000\u0189\u018a\u0005\'\u0000\u0000\u018a\u018b"+
+		"\u0005\u000f\u0000\u0000\u018b\u0190\u0003D\"\u0000\u018c\u018d\u0005"+
+		"\u0012\u0000\u0000\u018d\u018f\u0003D\"\u0000\u018e\u018c\u0001\u0000"+
+		"\u0000\u0000\u018f\u0192\u0001\u0000\u0000\u0000\u0190\u018e\u0001\u0000"+
+		"\u0000\u0000\u0190\u0191\u0001\u0000\u0000\u0000\u0191\u0193\u0001\u0000"+
+		"\u0000\u0000\u0192\u0190\u0001\u0000\u0000\u0000\u0193\u0194\u0005\u0010"+
+		"\u0000\u0000\u0194\u0195\u0005\u001c\u0000\u0000\u0195=\u0001\u0000\u0000"+
+		"\u0000\u0196\u0197\u0005(\u0000\u0000\u0197\u0198\u0003@ \u0000\u0198"+
+		"\u0199\u0005\u001c\u0000\u0000\u0199?\u0001\u0000\u0000\u0000\u019a\u019d"+
+		"\u0003B!\u0000\u019b\u019c\u0007\u0002\u0000\u0000\u019c\u019e\u0003B"+
+		"!\u0000\u019d\u019b\u0001\u0000\u0000\u0000\u019d\u019e\u0001\u0000\u0000"+
+		"\u0000\u019eA\u0001\u0000\u0000\u0000\u019f\u01a2\u0003D\"\u0000\u01a0"+
+		"\u01a1\u0007\u0003\u0000\u0000\u01a1\u01a3\u0003D\"\u0000\u01a2\u01a0"+
+		"\u0001\u0000\u0000\u0000\u01a2\u01a3\u0001\u0000\u0000\u0000\u01a3C\u0001"+
+		"\u0000\u0000\u0000\u01a4\u01a9\u0003F#\u0000\u01a5\u01a6\u0007\u0004\u0000"+
+		"\u0000\u01a6\u01a8\u0003F#\u0000\u01a7\u01a5\u0001\u0000\u0000\u0000\u01a8"+
+		"\u01ab\u0001\u0000\u0000\u0000\u01a9\u01a7\u0001\u0000\u0000\u0000\u01a9"+
+		"\u01aa\u0001\u0000\u0000\u0000\u01aaE\u0001\u0000\u0000\u0000\u01ab\u01a9"+
+		"\u0001\u0000\u0000\u0000\u01ac\u01b1\u0003H$\u0000\u01ad\u01ae\u0007\u0005"+
+		"\u0000\u0000\u01ae\u01b0\u0003H$\u0000\u01af\u01ad\u0001\u0000\u0000\u0000"+
+		"\u01b0\u01b3\u0001\u0000\u0000\u0000\u01b1\u01af\u0001\u0000\u0000\u0000"+
+		"\u01b1\u01b2\u0001\u0000\u0000\u0000\u01b2G\u0001\u0000\u0000\u0000\u01b3"+
+		"\u01b1\u0001\u0000\u0000\u0000\u01b4\u01b9\u0003J%\u0000\u01b5\u01b6\u0005"+
+		"8\u0000\u0000\u01b6\u01b8\u0003J%\u0000\u01b7\u01b5\u0001\u0000\u0000"+
+		"\u0000\u01b8\u01bb\u0001\u0000\u0000\u0000\u01b9\u01b7\u0001\u0000\u0000"+
+		"\u0000\u01b9\u01ba\u0001\u0000\u0000\u0000\u01baI\u0001\u0000\u0000\u0000"+
+		"\u01bb\u01b9\u0001\u0000\u0000\u0000\u01bc\u01bd\u0005\u000f\u0000\u0000"+
+		"\u01bd\u01be\u0003@ \u0000\u01be\u01bf\u0005\u0010\u0000\u0000\u01bf\u01c4"+
+		"\u0001\u0000\u0000\u0000\u01c0\u01c4\u0003\f\u0006\u0000\u01c1\u01c4\u0003"+
+		"&\u0013\u0000\u01c2\u01c4\u0003L&\u0000\u01c3\u01bc\u0001\u0000\u0000"+
+		"\u0000\u01c3\u01c0\u0001\u0000\u0000\u0000\u01c3\u01c1\u0001\u0000\u0000"+
+		"\u0000\u01c3\u01c2\u0001\u0000\u0000\u0000\u01c4K\u0001\u0000\u0000\u0000"+
+		"\u01c5\u01c6\u00059\u0000\u0000\u01c6\u01c7\u0003H$\u0000\u01c7M\u0001"+
+		"\u0000\u0000\u0000\u01c8\u01c9\u0005:\u0000\u0000\u01c9\u01ca\u0005;\u0000"+
+		"\u0000\u01ca\u01cf\u0005:\u0000\u0000\u01cb\u01cc\u0005:\u0000\u0000\u01cc"+
+		"\u01cd\u0005<\u0000\u0000\u01cd\u01cf\u0005:\u0000\u0000\u01ce\u01c8\u0001"+
+		"\u0000\u0000\u0000\u01ce\u01cb\u0001\u0000\u0000\u0000\u01cfO\u0001\u0000"+
+		"\u0000\u0000\u01d0\u01d1\u0005=\u0000\u0000\u01d1\u01d2\u0005>\u0000\u0000"+
+		"\u01d2Q\u0001\u0000\u0000\u0000-V[`cnt\u007f\u0084\u008a\u0092\u009b\u00a9"+
+		"\u00ac\u00bb\u00cb\u00d7\u00e0\u00e8\u00ef\u00fc\u0100\u0109\u0111\u0118"+
+		"\u0125\u0128\u0132\u0135\u013a\u0143\u0149\u014e\u0155\u015c\u0163\u0180"+
+		"\u0187\u0190\u019d\u01a2\u01a9\u01b1\u01b9\u01c3\u01ce";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

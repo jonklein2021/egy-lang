@@ -1,0 +1,2 @@
+java -jar Egy/lib/antlr-4.13.2-complete.jar Egy/src/main/antlr4/Egy.g4 -no-listener -visitor -package antlr4
+find Egy/src/main/antlr4/ -type f ! -name "Egy.g4" -exec mv {} Egy/src/main/java/ \;
