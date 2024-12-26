@@ -6,13 +6,12 @@ grammar Egy;
 ****************************/
 
 type
-  : array_type
-  | discrete_type
-  | set_type
+  : discrete_type type_suffix*
   ;
 
-array_type
-  : type LBRACKET ( integerLiteral )? RBRACKET
+type_suffix
+  : LBRACKET numeric_literal? RBRACKET       // Array type
+  | LBRACE numeric_literal? RBRACE           // Set type
   ;
 
 discrete_type
@@ -24,11 +23,20 @@ discrete_type
   | FLOAT
   | DOUBLE
   | STRING
-  | FUNCTION
+  | function_type
   ;
 
-set_type
-  : type LBRACE ( integerLiteral )? RBRACE
+function_type
+  : FUNCTION COLON LPAREN parameter_types? RPAREN RIGHTARROW return_type
+  ;
+
+parameter_types
+  : type ( COMMA type )*
+  ;
+
+return_type
+  : type
+  | VOID
   ;
 
 /****************************
@@ -43,7 +51,7 @@ literal
   ;
 
 array_literal
-  : LBRACE literal ( COMMA literal )* RBRACE
+  : LBRACKET literal ( COMMA literal )* RBRACKET
   ;
 
 discrete_literal
@@ -54,8 +62,8 @@ discrete_literal
   ;
 
 boolean_literal
-  : 'true'
-  | 'false'
+  : TRUE
+  | FALSE
   ;
 
 /*
@@ -67,11 +75,11 @@ boolean_literal
     else
       return b
 
-  succ(n: long) -> long
+  (n: long) -> long
     return n+1;
 */
 function_definition
-  : LPAREN ( id COLON type ( COMMA id COLON type )* )? RPAREN RIGHTARROW type statement
+  : LPAREN ( ID COLON type ( COMMA ID COLON type )* )? RPAREN RIGHTARROW type statement
   ;
 
 numeric_literal
@@ -82,7 +90,7 @@ numeric_literal
   ;  
 
 set_literal
-  : LBRACKET literal ( COMMA literal )* RBRACKET
+  : LBRACE literal ( COMMA literal )* RBRACE
   ;
 
 /***************************
@@ -100,30 +108,55 @@ statement
   | repeat_statement
   | for_statement
   | print_statement
+  | return_statement
   ;
 
 assignment_statement
-  : lhs_reference ASSIGN logical_expression SEMICOLON
+  : lvalue ASSIGN logical_expression ( COMMA lvalue ASSIGN logical_expression )* SEMICOLON
   ;
 
 const_initialization_statement
-  : CONST lhs_reference ( COLON type )? ASSIGN logical_expression SEMICOLON
+  : CONST lvalue ( COLON type )? ASSIGN logical_expression ( COMMA lvalue ( COLON type )? ASSIGN logical_expression )* SEMICOLON
   ;
 
 declaration_statement
-  : LET lhs_reference COLON type SEMICOLON
+  : LET lvalue COLON type ( COMMA lvalue ( COLON type )? )* SEMICOLON
   ;
 
 initialization_statement
-  : LET lhs_reference ( COLON type )? ASSIGN logical_expression SEMICOLON
+  : LET lvalue ( COLON type )? ASSIGN logical_expression ( COMMA lvalue ( COLON type )? ASSIGN logical_expression )* SEMICOLON
   ;
 
-lhs_reference
-  : id ( LBRACKET simple_expression RBRACKET )?
+lvalue
+  : function_call                                         // Function call
+  | ID ( LBRACKET simple_expression RBRACKET )*           // Array access
   ;
 
-rhs_value
-  : id ( LBRACKET simple_expression RBRACKET )?
+/*
+  ex:
+
+  add(x, 1*2)
+  foo(a, b, c)
+  arrayReturner()[0]
+  functionReturner()()
+  crazy(0)[10]()()[a+b](1)
+*/
+rvalue
+  : function_call                                         // Function call
+  | ID ( LBRACKET simple_expression RBRACKET )*           // Array access
+  ;
+
+function_call
+  : ID LPAREN argument_list? RPAREN ( LBRACKET simple_expression RBRACKET )* function_call_suffix*
+  ;
+
+function_call_suffix
+  : LPAREN argument_list? RPAREN                          // Additional function call (e.g., `()`)
+  | LBRACKET simple_expression RBRACKET                   // Array indexing (e.g., `[i]`)
+  ;
+
+argument_list
+  : simple_expression ( COMMA simple_expression )*            // A list of expressions (comma-separated)
   ;
 
 compound_statement
@@ -143,15 +176,13 @@ repeat_statement
   ;
 
 for_statement
-  : FOR id IN for_iterable statement
+  : FOR ID IN for_iterable statement
   ;
 
 for_iterable
-  : array_literal
-  | char_literal DOTDOT char_literal
-  | numeric_literal DOTDOT numeric_literal
-  | id
+  : ID
   | set_literal
+  | simple_expression
   ;
 
 if_statement
@@ -160,6 +191,10 @@ if_statement
 
 print_statement
   : PRINT LPAREN simple_expression ( COMMA simple_expression )* RPAREN SEMICOLON
+  ;
+
+return_statement
+  : RETURN logical_expression SEMICOLON
   ;
 
 /*************************
@@ -183,9 +218,13 @@ term
   ;
 
 factor
+  : base (op=POW base)*
+  ;
+
+base
   : LPAREN fle=logical_expression RPAREN
   | fl=literal
-  | fi=rhs_value
+  | fi=rvalue
   | fn=negation
   ;
 
@@ -233,6 +272,10 @@ DOUBLE
   : 'double'
   ;
 
+DOUBLEQUOTE
+  : '"'
+  ;
+
 INT
   : 'int'
   ;
@@ -243,6 +286,10 @@ ELSE
 
 EQUALS
   : '=='
+  ;
+
+FALSE
+  : 'false'
   ;
 
 FLOAT
@@ -333,6 +380,10 @@ PLUS
   : '+'
   ;
 
+POW
+  : '**'
+  ;
+
 PRINT
   : 'print'
   ;
@@ -347,6 +398,10 @@ RBRACKET
 
 REPEAT
   : 'repeat'
+  ;
+
+RETURN
+  : 'return'
   ;
 
 RIGHTARROW
@@ -373,12 +428,20 @@ SHORT
   : 'short'
   ;
 
+SINGLEQUOTE
+  : '\''
+  ;
+
 STRING
   : 'string'
   ;
 
 TIMES 
   : '*'
+  ;
+
+TRUE
+  : 'true'
   ;
 
 UNTIL
@@ -394,7 +457,7 @@ WHILE
   ;
 
 /* ex: hello, jimmy_7, _unused */
-id
+ID
   : [a-zA-Z_][a-zA-Z0-9_]*
   ;
 
@@ -420,8 +483,8 @@ HEXADECIMALLITERAL
 
 /* ex: '\b', 'a', '\r', '\f' */
 char_literal
-  :	'\'' SingleCharacter '\''
-  |	'\'' EscapeSequence '\''
+  :	SINGLEQUOTE SingleCharacter SINGLEQUOTE
+  |	SINGLEQUOTE EscapeSequence SINGLEQUOTE
   ;
 
 fragment 
@@ -435,12 +498,16 @@ EscapeSequence
   ;
 
 string_literal
-  : '"' (~["\\\r\n] | '\\' (. | EOF))* '"'
+  : UnterminatedStringLiteral DOUBLEQUOTE
+  ;
+
+UnterminatedStringLiteral
+  : DOUBLEQUOTE (~["\\\r\n] | '\\' (. | EOF))*
   ;
 
 COMMENT
-  : '//' ~[\r\n]* -> skip                // Single-line comment
-  | '/*' .*? '*/' -> skip                // Multi-line comment
+  : '//' ~[\r\n]* -> skip
+  | '/*' .*? '*/' -> skip
   ;
 
 

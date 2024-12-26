@@ -1,7 +1,14 @@
-let total = 0;
+let sumRange = (start: long, end: long) -> longer {
+    let total = 0;
 
-for i in 1..10 {
-    total = total + i;
+    for num in start..end {
+        total = total + num;
+    }
+
+    return total;
 }
 
-print()
+const a = 1, b = 100;
+const result: longer = sumRange(a, b);
+
+print(result); // 5050
