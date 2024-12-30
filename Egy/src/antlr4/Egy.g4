@@ -16,12 +16,7 @@ type_suffix
 
 discrete_type
   : CHAR
-  | SHORT
-  | INT
-  | LONG
-  | LONGER
-  | FLOAT
-  | DOUBLE
+  | NUMBER
   | STRING
   | function_type
   ;
@@ -84,7 +79,7 @@ function_definition
 
 numeric_literal
   : BINARYLITERAL
-  | DECIMALLITERAL
+  | DECIMALLITERAL ( PERIOD DECIMALLITERAL? )?
   | OCTALLITERAL
   | HEXADECIMALLITERAL
   ;  
@@ -276,10 +271,6 @@ DOUBLEQUOTE
   : '"'
   ;
 
-INT
-  : 'int'
-  ;
-
 ELSE
   : 'else'
   ;
@@ -290,10 +281,6 @@ EQUALS
 
 FALSE
   : 'false'
-  ;
-
-FLOAT
-  : 'float'
   ;
 
 FOR
@@ -340,14 +327,6 @@ LET
   : 'let'
   ;
 
-LONG
-  : 'long'
-  ;
-
-LONGER
-  : 'longer'
-  ;
-
 LPAREN
   : '('
   ;
@@ -366,6 +345,10 @@ MOD
 
 NOTEQUALTO
   : '!='
+  ;
+
+NUMBER
+  : 'num'
   ;
 
 OR
@@ -422,10 +405,6 @@ SEMICOLON
 
 SET
   : 'set'
-  ;
-
-SHORT
-  : 'short'
   ;
 
 SINGLEQUOTE
